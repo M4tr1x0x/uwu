@@ -1,0 +1,23 @@
+name: Example CI
+
+# Define en qué eventos se activará la acción
+on:
+  push:
+    branches:
+      - main
+
+# Define los jobs que se ejecutarán
+jobs:
+  build:
+    # Define el sistema operativo a usar
+    runs-on: ubuntu-latest
+
+    # Define los pasos a ejecutar
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a one-line script
+      run: echo Hello, world!
+    - name: Run a multi-line script
+      run: |
+        echo Add other commands you need
+        echo This is a multi-line script
